@@ -1,3 +1,5 @@
+import './Article.css'
+
 function Article() {
     return (
       <div className="Article">

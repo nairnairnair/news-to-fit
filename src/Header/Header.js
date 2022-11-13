@@ -9,7 +9,7 @@ function Header(props) {
     return (
         <header className="Header">
             <h1>All the Print That's News to Fit</h1>
-            <h2>A New York Times API-based NewsReader</h2>
+            <h4>A New York Times API-based NewsReader</h4>
             <nav>
                 <button className="navButton" onClick={() => setSection('us')}>U.S.</button>
                 <button className="navButton" onClick={() => setSection('world')}>WORLD</button>

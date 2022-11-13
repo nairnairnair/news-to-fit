@@ -3,25 +3,33 @@ import { useState, useEffect } from 'react';
 import getData from '../API Calls/APICall';
 import Article from '../Article/Article';
 import Header from '../Header/Header';
+import Results from '../Results/Results';
 
 function App() {
 
-  const [section, setSection] = useState('')
+  const [section, setSection] = useState('home')
   const [articles, setArticles] = useState([])
+  const [articleView, setArticleView] = useState(false)
+  const [articleClicked, setArticleClicked] = useState()
 
   useEffect(() => {
+    setArticleView(false)
       getData(section)
         .then(data => {
           setArticles(data.results)
         })
-     console.log("articles:", articles)
+        .then(console.log("articles:", articles))
     }, [section])
 
   return (
     <div className="App">
-      <header className="App-header">
-      <Header setSection={setSection}></Header>
-      </header>
+        <Header setSection={setSection}></Header>
+      <main>
+        {!articleView
+          ? <Results articles={articles}></Results>
+          : <Article articleClicked={articleClicked}></Article>
+        }
+      </main>
     </div>
   );
 }

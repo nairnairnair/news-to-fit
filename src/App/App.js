@@ -10,7 +10,18 @@ function App() {
   const [section, setSection] = useState('home')
   const [articles, setArticles] = useState([])
   const [articleView, setArticleView] = useState(false)
-  const [articleClicked, setArticleClicked] = useState()
+  const [articleClicked, setArticleClicked] = useState({
+    title: '',
+    subsection: '',
+    published_date: '',
+    abstract: '',
+    multimedia: [{
+      url: '',
+      caption: ''
+    }],
+    byline: '',
+    item_type: ''
+})
 
   useEffect(() => {
     setArticleView(false)
@@ -26,7 +37,7 @@ function App() {
         <Header setSection={setSection}></Header>
       <main>
         {!articleView
-          ? <Results articles={articles}></Results>
+          ? <Results articles={articles} setArticleView={setArticleView} setArticleClicked={setArticleClicked}></Results>
           : <Article articleClicked={articleClicked}></Article>
         }
       </main>

@@ -4,6 +4,7 @@ function Article() {
     return (
       <div className="Article">
         <header className="App-header">
+        <p>farticle</p>
         </header>
       </div>
     );

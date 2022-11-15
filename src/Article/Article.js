@@ -14,15 +14,16 @@ function Article({articleClicked, setArticleView}) {
             <section>
                 <img className="modal-img" src={arty.multimedia[0].url} alt={arty.multimedia[0].caption}/>
             </section>
-            <h2>{arty.title}</h2>
-            <p>{arty.byline}</p>
-            <p>Published: {arty.published_date}, Updated: {arty.updated_date}</p>
+            <section className='article-info'>
+                <h2>{arty.title}</h2>
+                <p>{arty.byline}</p>
+                <p>Published: {arty.published_date}, Updated: {arty.updated_date}</p>
+            </section>
             <p>{arty.abstract}</p>
             <p>
-                <a href={arty.url}>Read the full story on The New York Times site.</a>
-                Don't hit the paywall too hard!
+                <a href={arty.url}>Read the full story at The New York Times.</a>  Don't hit the paywall too hard!
             </p>
-            <button className="returnButton" onClick={returnHandler}>Return</button>
+            <button className="return-button" onClick={returnHandler}>Return</button>
         </article>
       </div>
     );

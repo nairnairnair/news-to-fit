@@ -12,7 +12,8 @@ The user can then either navigate to The Times site for the full article or retu
 #### Constraints:
 
 This application was made in under 8 hours as part of a simulated timed challenge. As a result, the focus was on achieving a functional
-minimum viable product and extra features and frills were of secondary concern. 
+minimum viable product and extra features and frills were of secondary concern. Initially, I had intended to display results for each section
+on a grid three articles wide but decided to go for a more mobile-friendly view.
 
 ## Screenshots
 

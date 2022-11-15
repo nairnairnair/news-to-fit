@@ -38,7 +38,7 @@ function App() {
       <main>
         {!articleView
           ? <Results articles={articles} setArticleView={setArticleView} setArticleClicked={setArticleClicked}></Results>
-          : <Article articleClicked={articleClicked}></Article>
+          : <Article articleClicked={articleClicked} setArticleView={setArticleView}></Article>
         }
       </main>
     </div>

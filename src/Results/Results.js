@@ -14,11 +14,12 @@ function Results({articles, setArticleView, setArticleClicked}) {
     return (
         <div className="results">{deConstArticles.map((article) => {
             return (
-                <section className="article-result" onClick={() => clickHandler(article)} key={article.short_url}>
+                <section className="article-result" tabIndex={0} onClick={() => clickHandler(article)} key={article.short_url}>
                     <h2>{article.title}</h2>
                     {article.multimedia ? <img src={article.multimedia[0].url} alt={article.multimedia[0].caption}/> : <p>no image</p>}
                     <p>{article.published_date}</p>
                     <h3>{article.subsection}</h3>
+                    <button onClick={() => clickHandler(article)}>View Article</button>
                 </section>)
                 } 
         )}
